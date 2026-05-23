@@ -1,0 +1,235 @@
+.signup-page {
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1.5px solid #1b1b1b;
+  border-radius: 8px;
+  background: #ffe8c2;
+  background-position: center;
+}
+
+/* AUTH CARD */
+.signup-card {
+  width: 420px;
+  border-radius: 16px;
+  padding: 0px 26px 0px 26px;
+  position: relative;
+}
+
+.back-btn {
+  background: #d35400;
+  color: white;
+  position: absolute;
+  top: -35px;
+  right: -20px;
+  width:40px;
+  height: 40px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.back-btn:hover{
+background: #b84300;
+transform: scale(1.05);
+}
+
+/* LOGO AND NAME */
+.signup-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.signup-header img {
+  border-radius: 50%;
+  width: 60px;
+  margin-top: 10px;
+}
+
+.signup-header h1 {
+  font-size: 1.8rem;
+  color: #d35400;
+  margin-left: 12px;
+  align-self: center;
+}
+
+/* TAB AREA */
+.auth-tabs-wrapper {
+  margin-bottom: 18px;
+}
+
+/* CONTENT AREA */
+.auth-content {
+  min-height: 300px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.auth-tab {
+  height: 40px;
+  flex: 1;
+  padding: 9px 0;
+  border: none;
+  border-radius: 22px;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover (subtle) */
+.auth-tab:hover {
+  background: #e8e8e8;
+}
+
+/* Active tab */
+.auth-tab.active {
+  background: #d35400;
+  color: white;
+  box-shadow: 0 6px 16px rgba(211, 84, 0, 0.35);
+}
+
+/* HEADINGS */
+.auth-section h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+  color: #1f1f1f;
+}
+
+.auth-section p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* SECTION VISIBILITY */
+.auth-section {
+  display: none;
+}
+
+.auth-section.active {
+  display: block;
+}
+
+/* FORMS */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* LABELS */
+.signup-form label {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: -6px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 11px 12px 11px 38px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  transition: border 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #d35400;
+}
+
+/* BUTTONS */
+.signup-btn {
+  width: 100%;
+  margin-top: 6px;
+  background: #d35400;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.signup-btn:hover {
+  background: #b84300;
+}
+
+.signup-btn i {
+  margin-left: 6px;
+}
+
+/* REMOVE LINK STYLING AROUND BUTTON */
+.signup-form a {
+  text-decoration: none;
+}
+
+/* STAFF INNER TABS */
+.staff-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.staff-tab {
+  flex: 1;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #f0f0f0;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.staff-tab.active {
+  background: #d35400;
+  color: white;
+}
+
+/* STAFF FORM VISIBILITY */
+.staff-form {
+  display: none;
+}
+
+.staff-form.active {
+  display: block;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 480px) {
+  .signup-card {
+    width: 92%;
+    padding: 24px 20px;
+  }
+}

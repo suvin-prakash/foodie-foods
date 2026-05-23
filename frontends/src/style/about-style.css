@@ -1,0 +1,142 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f5f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden; height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px; /* Account for fixed header */
+}
+
+.about-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(60%); /* Darkens image for better text readability */
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* About Us Section */
+.about {
+    display: flex;
+    padding: 40px 20px;
+    gap: 10%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.about img {
+    width: 100%; ;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#about-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about h1 {
+    margin-top: 20px;
+    font-size: 36px;
+    color: #c75000;
+}
+
+.about p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Overview Section */
+.overview {
+    text-align: center;
+    background-color: #ffe8c2;
+    padding: 50px 20px;
+}
+
+.overview h2 {
+    color: #c75000;
+    margin-bottom: 20px;
+}
+
+.overview-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.overview-box {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overview-box i {
+    font-size: 40px;
+    color: #c75000;
+    margin-bottom: 10px;
+}
+
+.overview-box h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.overview-box p {
+    font-size: 16px;
+    color: #555;
+}
