@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../style/signin-style.css";
 
 function Signin() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("login");
   const [signupData, setSignupData] = useState({
     username: "",
@@ -59,9 +60,9 @@ function Signin() {
         localStorage.setItem("user", JSON.stringify(data.user));
 
         if (data.user.role === "staff") {
-          window.location.href = "/admin";
+          navigate("/admin");
         } else {
-          window.location.href = "/";
+          navigate("/");
         }
       } else {
         alert(data.message);
@@ -91,7 +92,7 @@ function Signin() {
 
         alert("Staff Login Successful");
 
-        window.location.href = "/admin";
+        navigate("/admin");
       } else {
         alert(data.message);
       }

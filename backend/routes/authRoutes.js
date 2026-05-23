@@ -96,9 +96,6 @@ router.post("/login", async (req, res) => {
 
 
 //staff login
-router.get("/staff-login", (req, res) => {
-    res.send("Staff Route Working");
-});
 
 router.post("/staff-login", async (req, res) => {
 
