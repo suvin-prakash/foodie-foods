@@ -8,7 +8,7 @@ function Menu() {
   const [dbMenu, setDbMenu] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/menu")
+    fetch(`${import.meta.env.VITE_API_URL}/api/menu`)
       .then((res) => res.json())
       .then((data) => setDbMenu(data));
   }, []);
@@ -124,7 +124,7 @@ function Menu() {
                     <img
                       src={
                         item._id
-                          ? `http://localhost:5000${item.image}`
+                          ? `${import.meta.env.VITE_API_URL}${item.image}`
                           : item.image
                       }
                       alt={item.name}

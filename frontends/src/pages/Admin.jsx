@@ -42,7 +42,7 @@ function Admin() {
     formData.append("description", menuData.description);
     formData.append("image", menuData.image);
 
-    await fetch("http://localhost:5000/api/menu", {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/menu`, {
       method: "POST",
       body: formData,
     });
@@ -76,7 +76,7 @@ function Admin() {
   const markOrderSent = async (id) => {
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`http://localhost:5000/api/orders/${id}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -107,14 +107,14 @@ function Admin() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/reservations")
+      .get(`${import.meta.env.VITE_API_URL}/api/reservations`)
       .then((res) => setReservations(res.data));
   }, []);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5000/api/orders", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
       headers: {
         Authorization: token,
       },
@@ -131,7 +131,7 @@ function Admin() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/feedback")
+    fetch(`${import.meta.env.VITE_API_URL}/api/feedback`)
       .then((res) => res.json())
       .then((data) => setFeedbacks(data));
   }, []);

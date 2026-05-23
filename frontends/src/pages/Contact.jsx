@@ -21,7 +21,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:5000/api/feedback", formData);
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/feedback `, formData);
 
     alert("Message sent successfully!");
 

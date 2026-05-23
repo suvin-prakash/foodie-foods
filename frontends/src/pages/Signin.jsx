@@ -27,7 +27,7 @@ function Signin() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        `${import.meta.env.VITE_API_URL}/api/auth/signup`,
         signupData,
       );
 
@@ -48,7 +48,7 @@ function Signin() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
         loginData,
       );
 
@@ -78,7 +78,7 @@ function Signin() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/staff-login",
+        `${import.meta.env.VITE_API_URL}/api/auth/staff-login`,
         staffData,
       );
 

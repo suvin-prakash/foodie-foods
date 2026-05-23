@@ -24,7 +24,7 @@ function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:5000/api/reservations", formData);
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/reservations`, formData);
 
     alert("Reservation requested successfully! Our team will call you for conformation");
   };

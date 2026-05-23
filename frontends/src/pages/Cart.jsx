@@ -29,7 +29,7 @@ function Cart() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -97,7 +97,7 @@ function Cart() {
         {cartItems.map((item, index) => (
           <div key={index} className="cart-item">
             <img
-              src={item._id ? `http://localhost:5000${item.image}` : item.image}
+              src={item._id ? `${import.meta.env.VITE_API_URL}${item.image}` : item.image}
               alt={item.name}
               className="cart-img"
             />
